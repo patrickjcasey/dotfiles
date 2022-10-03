@@ -1,0 +1,17 @@
+---
+- name: clone neovim repo
+  git:
+    repo: https://github.com/neovim/neovim.git
+    dest: ~/repos/neovim
+    version: "master"
+    update: yes
+
+- name: build neovim
+  shell: 
+    cmd: make CMAKE_BUILD_TYPE=RelWithDebInfo
+    chdir: ~/repos/neovim
+
+- name: install neovim
+  shell: 
+    cmd: sudo make install
+    chdir: ~/repos/neovim 

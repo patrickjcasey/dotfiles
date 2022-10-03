@@ -1,0 +1,55 @@
+---
+- name: apt update
+  become: true
+  apt:
+    update_cache: yes
+    cache_valid_time: 600
+  tags:
+    - apt
+
+- name: apt install packages
+  become: true
+  tags:
+    - apt
+  apt: 
+    name: "{{ item }}"
+    state: present
+  loop:
+    - git 
+    - python3-pip
+    - tree
+    - curl
+    - golang
+    - build-essential
+    - cmake
+    - nvidia-settings
+    - xclip
+    - ninja-build
+    - gettext
+    - libtool
+    - libtool-bin
+    - autoconf
+    - automake
+    - g++
+    - pkg-config
+    - unzip
+    - doxygen
+    - jq
+    - zsh
+    - tmux
+    - wget
+    - curl
+    - fonts-hack-ttf
+    - libssl-dev
+    # alacritty
+    - libfreetype6-dev
+    - libfontconfig1-dev
+    - libxcb-xfixes0-dev
+    - libxkbcommon-dev
+    # end alacritty
+
+- name: update font cache
+  shell:
+    cmd: fc-cache -f -v
+
+  

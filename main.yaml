@@ -1,0 +1,24 @@
+- name: configure dev environment
+  hosts: local
+  roles:
+    - role: apt
+      tags:
+        - apt
+    - role: directories
+      tags:
+        - directories
+    - role: zsh
+      tags:
+        - zsh
+    - role: symbolic-links
+      tags:
+        - symbolic-links
+    - role: rust
+      tags:
+        - rust
+    - role: neovim
+      tags:
+        - neovim
+    - role: alacritty
+      tags:
+        - alacritty

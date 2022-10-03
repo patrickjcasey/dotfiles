@@ -1,0 +1,14 @@
+---
+- name: check for rust installation
+  stat: 
+    path: ~/.cargo/bin/cargo
+  register: cargo
+
+- name: install rust
+  when: not cargo.stat.exists
+  shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
+- name: update rustup
+  when: cargo.stat.exists
+  shell: rustup update
+
