@@ -111,3 +111,10 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.cargo/env ]] && source $HOME/.cargo/env
 
 alias vim=nvim
+
+VIM="nvim"
+XDG_CONFIG_HOME=$HOME/.config
+GIT_EDITOR=$VIM
+DOTFILES=$HOME/.dotfiles
+STOW_FOLDERS="alacritty,i3,nvim,tmux,ubuntu_conf,zsh"
+PATH=$HOME/.cargo/bin:$HOME/.rustup:$PATH
