@@ -13,5 +13,8 @@
 
 - name: install neovim
   shell: 
-    cmd: sudo make install
-    chdir: ~/repos/neovim 
+    cmd: '{{ item }}'
+    chdir: ~/repos/neovim
+  loop:
+   - rm -f /usr/local/bin/nvim
+   - sudo make install

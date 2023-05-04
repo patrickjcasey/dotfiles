@@ -1,5 +1,6 @@
 - name: configure dev environment
-  hosts: local
+  hosts: localhost
+  connection: local
   roles:
     - role: apt
       tags:

@@ -1,9 +1,0 @@
----
-- name: make necessary directories
-  file:
-    path: "{{ item }}"
-    state: directory
-  loop: 
-    - ~/repos
-    - ~/workspace
-    - ~/.config/alacritty
