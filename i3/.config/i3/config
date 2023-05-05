@@ -174,7 +174,7 @@ workspace 3 output DP-5
 
 # fixes audio issue
 exec pacmd set-default-sink alsa_output.usb-Astro_Gaming_Inc._ASTRO_MixAmp_Pro-00.iec958-stereo
-exec --no-startup-id compton -b
+exec picom
 exec feh --bg-fill ~/backgrounds/mountains.png
 exec_always autorandr --change
 
