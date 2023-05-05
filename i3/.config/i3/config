@@ -161,7 +161,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        tray_output primary
+        output DP-2
 }
 
 # ------------------------------------------
@@ -176,7 +176,8 @@ workspace 3 output DP-5
 exec pacmd set-default-sink alsa_output.usb-Astro_Gaming_Inc._ASTRO_MixAmp_Pro-00.iec958-stereo
 exec --no-startup-id compton -b
 exec feh --bg-fill ~/backgrounds/mountains.png
-exec compton -b
+exec_always autorandr --change
+
 
 # sets lock screen
 bindsym $mod+Escape exec i3lock -c 000000 && xset dpms force off
