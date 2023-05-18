@@ -1,0 +1,15 @@
+#!/bin/bash
+# This script creates an tar archive of all configs/packages needed to configure nvim, tmux, zsh, and alacritty in an offline environment
+
+OFFLINE_ARCHIVE=/tmp/offline_dev_setup
+echo "Deleting old $OFFLINE_ARCHIVE"
+rm -rf $OFFLINE_ARCHIVE
+mkdir -p $OFFLINE_ARCHIVE
+
+echo "Copying neovim configuration and data"
+cp -r ~/.dotfiles/nvim/.config/nvim $OFFLINE_ARCHIVE/nvim_config
+cp -r ~/.local/share/nvim $OFFLINE_ARCHIVE/nvim_data
+
+echo "Copying tmux configuration and data"
+cp -r ~/.dotfiles/tmux/.config/tmux $OFFLINE_ARCHIVE/tmux_config
+

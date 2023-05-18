@@ -196,6 +196,9 @@ vim.o.clipboard = 'unnamedplus'
 -- Enable break indent
 vim.o.breakindent = true
 
+-- Keep 15 lines at bottom of file
+vim.o.scrolloff = 15
+
 -- Save undo history
 vim.o.undofile = true
 
