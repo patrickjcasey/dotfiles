@@ -107,6 +107,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+source ~/.config/zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh
+
 # sources cargo env
 [[ -f ~/.cargo/env ]] && source $HOME/.cargo/env
 

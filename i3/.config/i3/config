@@ -9,11 +9,14 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+
+include ~/.config/i3/catppuccin-macchiato
+
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 15px
+font JetBrains Mono 12
 
 # GET DEM BORDERS OUT OF HEREc:w
 #
@@ -157,13 +160,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-        output DP-2
-}
-
 # ------------------------------------------
 # CUSTOM KEYS START
 # ------------------------------------------
@@ -174,11 +170,13 @@ workspace 3 output DP-5
 
 # fixes audio issue
 exec pacmd set-default-sink alsa_output.usb-Astro_Gaming_Inc._ASTRO_MixAmp_Pro-00.iec958-stereo
+# runs compositor
 exec picom
-exec feh --bg-fill ~/backgrounds/mountains.png
-exec_always autorandr --change
-
+# configures monitors
+exec autorandr --change
+exec feh --bg-scale --zoom max ~/backgrounds/mountain-horizontal-background.jpg
 
 # sets lock screen
 bindsym $mod+Escape exec i3lock -c 000000 && xset dpms force off
+
 

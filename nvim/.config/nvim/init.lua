@@ -100,14 +100,16 @@ require('lazy').setup({
     },
   },
 
-  { -- Theme inspired by Atom
+  -- colorthemes
+  {
     'folke/tokyonight.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'tokyonight-storm'
     end,
   },
-
+  {
+    'catppuccin/nvim', name = "catppuccin"
+  },
   { -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
@@ -219,6 +221,7 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+vim.cmd.colorscheme "catppuccin-macchiato"
 
 -- [[ Basic Keymaps ]]
 
