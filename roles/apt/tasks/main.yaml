@@ -40,14 +40,11 @@
     - wget
     - curl
     - fonts-hack-ttf
+    - fonts-jetbrains-mono
     - libssl-dev
-    # alacritty
-    - libfreetype6-dev
-    - libfontconfig1-dev
-    - libxcb-xfixes0-dev
-    - libxkbcommon-dev
-    # end alacritty
-
+    - kitty
+    - picom
+    - feh
 - name: update font cache
   shell:
     cmd: fc-cache -f -v
