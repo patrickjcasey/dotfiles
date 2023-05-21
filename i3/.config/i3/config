@@ -174,7 +174,7 @@ exec pacmd set-default-sink alsa_output.usb-Astro_Gaming_Inc._ASTRO_MixAmp_Pro-0
 exec picom
 # configures monitors
 exec autorandr --change
-exec feh --bg-scale --zoom max ~/backgrounds/mountain-horizontal-background.jpg
+exec_always feh --bg-scale --zoom max ~/backgrounds/mountain-horizontal-background.jpg
 
 # sets lock screen
 bindsym $mod+Escape exec i3lock -c 000000 && xset dpms force off
