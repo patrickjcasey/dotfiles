@@ -11,7 +11,7 @@ Kickstart.nvim is a template for your own configuration.
   If you don't know anything about Lua, I recommend taking some time to read through
   a guide. One possible example:
   - https://learnxinyminutes.com/docs/lua/
-  And then you can explore or search through `:help lua-guide`
+  Andl then you can explore or search through `:help lua-guide`
 Kickstart Guide:
 I have left several `:help X` comments throughout the init.lua
 You should run that command and read that help section for more information.
@@ -401,18 +401,23 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  -- clangd = {},
-  -- gopls = {},
+  clangd = {},
   pyright = {},
   rust_analyzer = {},
-  -- tsserver = {},
-
+  bashls = {},
+  asm_lsp = {},
+  cssls = {},
+  jsonls = {},
+  html = {},
+  marksman = {},
+  ruff_lsp = {},
+  yamlls = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
     },
-  },
+    },
 }
 
 -- Setup neovim lua configuration

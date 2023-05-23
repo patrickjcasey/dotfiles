@@ -14,7 +14,8 @@ cp -r ~/.dotfiles/nvim/.config/nvim $OFFLINE_ARCHIVE/.config
 cp -r ~/.local/share/nvim $OFFLINE_ARCHIVE/.local/sharoe
 
 echo "Copying tmux configuration and data"
-cp -r ~/.dotfiles/tmux/.config/tmux $OFFLINE_ARCHIVE/.config
+cp ~/.dotfiles/tmux/.tmux.conf $OFFLINE_ARCHIVE
+cp ~/.dotfiles/tmux/.tmux $OFFLINE_ARCHIVE
 
 echo "Copying kitty configuration"
 cp -r ~/.dotfiles/kitty/.config/kitty $OFFLINE_ARCHIVE/.config

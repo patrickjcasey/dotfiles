@@ -3,3 +3,5 @@ tar zxvf dotfiles.tar.gz
 cp -r dotfiles/.local ~
 cp -r dotfiles/.config ~
 cp dotfiles/.zshrc ~
+cp dotfiles/.tmux.conf ~/.tmux.conf
+cp -r dotfiles/.tmux ~/.tmux
