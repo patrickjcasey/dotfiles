@@ -25,7 +25,8 @@ cp -r ~/.dotfiles/zsh/.config/zsh $OFFLINE_ARCHIVE/.config
 
 cd $OFFLINE && tar zcvf dotfiles.tar.gz dotfiles
 
+echo "Copying offline install script"
+cp ~/.dotfiles/install_offline $OFFLINE
+
 # cleanup
 rm -rf $OFFLINE_ARCHIVE
-
-
