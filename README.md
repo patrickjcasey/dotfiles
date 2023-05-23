@@ -2,7 +2,7 @@
 This repository configures my dotfiles for various programs. It is simple to run and does not require manually configuring symlinks!
 
 ## Contains dotfiles for following programs:
-- alacritty
+- kitty
 - i3
 - neovim
 - tmux
@@ -10,4 +10,10 @@ This repository configures my dotfiles for various programs. It is simple to run
 
 ## How to use
 
-```./ubuntu```
+** This has only been tested on Ubuntu 22.04 **
+
+```
+git clone https://github.com/patrickjcasey/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./ubuntu
+```
