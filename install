@@ -1,6 +1,6 @@
-#!/usr/bin/env zsh
+#!/usr/bin/bash
 pushd $DOTFILES
-for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+for folder in $(echo $STOW_FOLDERS)
 do
     echo "stow $folder"
     stow -D $folder
