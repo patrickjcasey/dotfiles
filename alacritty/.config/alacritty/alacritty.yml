@@ -3,6 +3,7 @@ import:
 
 env:
   TERM: xterm-256color
+  LC_CTYPE: en_US.UTF-8
 
 window:
   opacity: 0.8
@@ -19,9 +20,11 @@ font:
 
 shell:
   program: /usr/bin/bash
+  args:
+    - --login
 
 cursor:
   style:
     shape: Beam
 
-live_config_reload: true
+live_config_reload: true 
