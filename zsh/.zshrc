@@ -118,5 +118,5 @@ VIM="nvim"
 XDG_CONFIG_HOME=$HOME/.config
 GIT_EDITOR=$VIM
 DOTFILES=$HOME/.dotfiles
-STOW_FOLDERS="kitty,i3,nvim,tmux,ubuntu_conf,zsh,alacritty"
+STOW_FOLDERS="kitty,i3,nvim,tmux,ubuntu_conf,zsh,alacritty,zellij"
 PATH=$HOME/.cargo/bin:$HOME/.rustup:$PATH
