@@ -11,7 +11,7 @@ mkdir -p $OFFLINE_ARCHIVE/.config
 
 echo "Copying neovim configuration and data"
 cp -r ~/.dotfiles/nvim/.config/nvim $OFFLINE_ARCHIVE/.config
-cp -r ~/.local/share/nvim $OFFLINE_ARCHIVE/.local/sharoe
+cp -r ~/.local/share/nvim $OFFLINE_ARCHIVE/.local/share
 
 echo "Copying tmux configuration and data"
 cp ~/.dotfiles/tmux/.tmux.conf $OFFLINE_ARCHIVE
