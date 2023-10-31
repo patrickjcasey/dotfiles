@@ -12,22 +12,4 @@ mkdir -p $OFFLINE_ARCHIVE/.config
 echo "Copying neovim configuration and data"
 cp -r ~/.dotfiles/nvim/.config/nvim $OFFLINE_ARCHIVE/.config
 cp -r ~/.local/share/nvim $OFFLINE_ARCHIVE/.local/share
-
-echo "Copying tmux configuration and data"
-cp ~/.dotfiles/tmux/.tmux.conf $OFFLINE_ARCHIVE
-cp ~/.dotfiles/tmux/.tmux $OFFLINE_ARCHIVE
-
-echo "Copying kitty configuration"
-cp -r ~/.dotfiles/kitty/.config/kitty $OFFLINE_ARCHIVE/.config
-
-echo "Copying zsh configuration and data"
-cp -r ~/.dotfiles/zsh/.zshrc $OFFLINE_ARCHIVE
-cp -r ~/.dotfiles/zsh/.config/zsh $OFFLINE_ARCHIVE/.config
-
-cd $OFFLINE && tar zcvf dotfiles.tar.gz dotfiles
-
-echo "Copying offline install script"
-cp ~/.dotfiles/install_offline $OFFLINE
-
-# cleanup
 rm -rf $OFFLINE_ARCHIVE

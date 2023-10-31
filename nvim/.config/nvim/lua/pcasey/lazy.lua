@@ -12,11 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({{import = "pcasey.plugins"}, {import = "pcasey.plugins.lsp"}}, {
-  install = {
-    colorscheme = { "nightfly" },
-  },
   checker = {
-    enabled = true,
+    enabled = false,
     notify = false,
   },
   change_detection = {

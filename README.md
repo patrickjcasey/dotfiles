@@ -7,6 +7,8 @@ This repository configures my dotfiles for various programs. It is simple to run
 - neovim
 - tmux
 - zsh
+- zellij
+- tmux
 
 ## How to use
 
