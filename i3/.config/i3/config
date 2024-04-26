@@ -169,12 +169,12 @@ workspace 2 output DP-2
 workspace 3 output DP-5
 
 # fixes audio issue
-exec pacmd set-default-sink alsa_output.usb-Astro_Gaming_Inc._ASTRO_MixAmp_Pro-00.iec958-stereo
+exec --no-startup-id pacmd set-default-sink alsa_output.usb-Astro_Gaming_Inc._ASTRO_MixAmp_Pro-00.iec958-stereo
 # runs compositor
-exec picom
+exec --no-startup-id picom
 # configures monitors
-exec autorandr --change
-exec_always feh --bg-scale --zoom max ~/backgrounds/mountain-horizontal-background.jpg
+exec --no-startup-id autorandr --change
+exec_always --no-startup-id feh --bg-scale --zoom max ~/backgrounds/mountain-horizontal-background.jpg
 
 # sets lock screen
 bindsym $mod+Escape exec i3lock -c 000000 && xset dpms force off
