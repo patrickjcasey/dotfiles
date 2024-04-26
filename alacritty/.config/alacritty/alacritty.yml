@@ -1,5 +1,6 @@
 import:
   - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+live_config_reload: true
 env:
   TERM: xterm-256color
   LC_CTYPE: en_US.UTF-8
@@ -8,11 +9,8 @@ window:
   decorations: none
 font:
   normal:
-    family: FiraMono Nerd Font Mono
-  bold:
-    family: FiraMono Nerd Font Mono
-  italic:
-    family: FiraMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font
+    style: SemiBold
   size: 12.0
 shell:
   program: /usr/bin/bash
@@ -21,4 +19,4 @@ shell:
 cursor:
   style:
     shape: Beam
-live_config_reload: true
+    unfocused_hollow: false
