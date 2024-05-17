@@ -46,9 +46,5 @@
     - picom
     - feh
     - fzf
+    - i3
 
-- name: update font cache
-  shell:
-    cmd: fc-cache -f -v
-
-  
