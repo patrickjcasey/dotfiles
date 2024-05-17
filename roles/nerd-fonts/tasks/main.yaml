@@ -1,0 +1,25 @@
+---
+- name: create /opt/nerd-fonts
+  become: true
+  file:
+    path: '{{ item }}'
+    state: directory
+  loop:
+    - /tmp/nerd-fonts
+    - /usr/local/share/fonts/nerd-fonts
+
+- name: download JetBrainsMono Nerd Font
+  get_url: 
+    url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+    dest: /tmp/nerd-fonts
+
+- name: install JetBrainsMono Nerd Font
+  become: true
+  shell: 
+    cmd: '{{ item }}'
+    chdir: /tmp/nerd-fonts
+  loop:
+    - unzip -o /tmp/nerd-fonts/JetBrainsMono.zip
+    - sudo cp *.ttf /usr/local/share/fonts/nerd-fonts
+    - fc-cache -fv
+  

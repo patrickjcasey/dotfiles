@@ -45,6 +45,8 @@
     - kitty
     - picom
     - feh
+    - fzf
+
 - name: update font cache
   shell:
     cmd: fc-cache -f -v

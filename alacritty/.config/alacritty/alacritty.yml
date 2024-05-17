@@ -13,7 +13,7 @@ font:
     style: SemiBold
   size: 12.0
 shell:
-  program: /usr/bin/bash
+  program: /usr/bin/zsh
   args:
     - --login
 cursor:

@@ -3,18 +3,18 @@
   git:
     repo: https://github.com/neovim/neovim.git
     dest: ~/repos/neovim
-    version: "master"
+    version: stable
     update: yes
+    force: yes
 
-- name: build neovim
-  shell: 
-    cmd: make CMAKE_BUILD_TYPE=RelWithDebInfo
-    chdir: ~/repos/neovim
-
-- name: install neovim
+- name: build and install latest stable neovim
   shell: 
     cmd: '{{ item }}'
     chdir: ~/repos/neovim
   loop:
-   - rm -f /usr/local/bin/nvim
+   - rm -r .deps/
+   - rm -r build/
+   - make CMAKE_BUILD_TYPE=Release
+   - sudo rm -f /usr/local/bin/nvim
+   - sudo rm -r /usr/local/share/nvim
    - sudo make install
