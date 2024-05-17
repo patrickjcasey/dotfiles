@@ -1,24 +1,24 @@
 ---
-- name: check for rust installation
-  stat: 
-    path: ~/.cargo/bin/cargo
-  register: cargo
+- name: check for rustup installation
+  command: which rustup 
+  register: rustup_location
+  ignore_errors: true
 
-- name: install rust
-  when: not cargo.stat.exists
+- name: install rustup
+  when: rustup_location.rc != 0 
   shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 - name: rustup update
   shell: rustup update
 
 - name: Install toolchains
-  command: rustup install "{{ item }}"
+  command: ~/.cargo/bin/rustup install "{{ item }}"
   loop:
     - stable
     - nightly
 
 - name: Install rust binaries
-  command: cargo install "{{ item }}"
+  command: ~/.cargo/bin/cargo install "{{ item }}"
   loop:
     - zoxide
     - starship
