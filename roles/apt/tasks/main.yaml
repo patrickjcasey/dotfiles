@@ -39,8 +39,6 @@
     - tmux
     - wget
     - curl
-    - fonts-hack-ttf
-    - fonts-jetbrains-mono
     - libssl-dev
     - kitty
     - picom
