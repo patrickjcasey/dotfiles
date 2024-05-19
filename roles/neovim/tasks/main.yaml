@@ -1,4 +1,18 @@
 ---
+- name: install neovim dependencies
+  become: true
+  tags:
+    - apt
+  apt:
+    state: present
+    name:
+      - ninja-build
+      - gettext
+      - cmake
+      - unzip
+      - curl
+      - build-essential
+
 - name: clone neovim repo
   git:
     repo: https://github.com/neovim/neovim.git

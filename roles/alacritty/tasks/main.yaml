@@ -1,4 +1,18 @@
 ---
+- name: install alacritty dependencies
+  become: true
+  tags:
+    - apt
+  apt:
+    state: present
+    name:
+      - pkg-config
+      - libfreetype6-dev
+      - libfontconfig1-dev
+      - libxcb-xfixes0-dev
+      - libxkbcommon-dev
+      - python3
+
 - name: clone alacritty repo
   git:
     repo: https://github.com/alacritty/alacritty.git
@@ -23,4 +37,4 @@
 
 - name: make alacritty default terminal
   shell:
-    cmd: sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
+  cmd: sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
