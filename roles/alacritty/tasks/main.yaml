@@ -9,7 +9,7 @@
 - name: build alacritty
   shell:
     chdir: ~/repos/alacritty
-    cmd: cargo build --release
+    cmd: ~/.cargo/bin/cargo build --release
 
 - name: install alacritty
   shell:
