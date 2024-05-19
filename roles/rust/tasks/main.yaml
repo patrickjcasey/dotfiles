@@ -9,16 +9,17 @@
   shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 - name: rustup update
-  shell: rustup update
+  shell: ~/.cargo/bin/rustup update
 
-- name: Install toolchains
+- name: install toolchains
   command: ~/.cargo/bin/rustup install "{{ item }}"
   loop:
     - stable
     - nightly
 
-- name: Install rust binaries
+- name: install rust binaries
   command: ~/.cargo/bin/cargo install "{{ item }}"
   loop:
     - zoxide
     - starship
+    - bat
