@@ -11,7 +11,6 @@ sudo apt install git ansible
 git clone https://github.com/patrickjcasey/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ansible-playbook --ask-become-pass main.yaml
-./ubuntu
 ```
 
 ## Installs
@@ -38,3 +37,5 @@ ansible-playbook --ask-become-pass main.yaml
 - tmux
 - alacritty
 
+## Oddities
+when running `nvidia-settings`, use `nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings`. This is because of this [issue](https://github.com/NVIDIA/nvidia-settings/issues/30)
