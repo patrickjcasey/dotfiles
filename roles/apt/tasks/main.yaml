@@ -35,3 +35,4 @@
       - i3
       - rofi
       - stow
+      - cmake
