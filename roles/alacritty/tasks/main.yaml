@@ -37,4 +37,4 @@
 
 - name: make alacritty default terminal
   shell:
-  cmd: sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
+    cmd: sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
