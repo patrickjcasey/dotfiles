@@ -12,37 +12,37 @@
   tags:
     - apt
   apt: 
-    name: "{{ item }}"
     state: present
-  loop:
-    - git 
-    - python3-pip
-    - tree
-    - curl
-    - golang
-    - build-essential
-    - cmake
-    - nvidia-settings
-    - xclip
-    - ninja-build
-    - gettext
-    - libtool
-    - libtool-bin
-    - autoconf
-    - automake
-    - g++
-    - pkg-config
-    - unzip
-    - doxygen
-    - jq
-    - zsh
-    - tmux
-    - wget
-    - curl
-    - libssl-dev
-    - kitty
-    - picom
-    - feh
-    - fzf
-    - i3
-
+    name:
+      - git 
+      - python3-pip
+      - tree
+      - curl
+      - golang
+      - build-essential
+      - cmake
+      - nvidia-settings
+      - xclip
+      - ninja-build
+      - gettext
+      - libtool
+      - libtool-bin
+      - autoconf
+      - automake
+      - g++
+      - pkg-config
+      - unzip
+      - doxygen
+      - jq
+      - zsh
+      - tmux
+      - wget
+      - curl
+      - libssl-dev
+      - kitty
+      - picom
+      - feh
+      - fzf
+      - i3
+      - rofi
+      - stow
