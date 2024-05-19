@@ -1,0 +1,14 @@
+shell = { program = "/usr/bin/zsh", args = ["-l"]}
+live_config_reload = true
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "SemiBold" }
+size = 14.0
+
+[cursor]
+style = { shape = "Beam" }
+unfocused_hollow = false
+
+[window]
+opacity = 0.8
+decorations = "None"

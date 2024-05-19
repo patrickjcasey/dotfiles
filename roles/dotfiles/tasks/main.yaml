@@ -3,3 +3,9 @@
   shell:
     chdir: ~/.dotfiles
     cmd: stow dotfiles -t ~/.config
+
+- name: symlink ~/.config/zsh/.zshrc to ~/.zshrc
+  file:
+    src: ~/.config/zsh/.zshrc
+    dest: ~/.zshrc
+    state: link
