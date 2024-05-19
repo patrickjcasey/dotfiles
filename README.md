@@ -26,6 +26,7 @@ ansible-playbook --ask-become-pass main.yaml
 - [starship](https://github.com/starship/starship)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [bat](https://github.com/sharkdp/bat)
+- [zellij](https://github.com/zellij-org/zellij)
 
 ## Contains configuration for following programs:
 - kitty

@@ -1,0 +1,5 @@
+---
+- name: install dotfiles
+  shell:
+    chdir: ~/.dotfiles
+    cmd: stow dotfiles -t ~/.config
