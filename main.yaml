@@ -17,3 +17,6 @@
     - role: nerd-fonts
       tags:
         - nerd-fonts
+    - role: lazygit
+      tags:
+        - lazygit
