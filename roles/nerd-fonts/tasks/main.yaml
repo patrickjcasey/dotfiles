@@ -1,5 +1,5 @@
 ---
-- name: create /opt/nerd-fonts
+- name: create /tmp/nerd-fonts
   become: true
   file:
     path: '{{ item }}'
@@ -9,6 +9,7 @@
     - /usr/local/share/fonts/nerd-fonts
 
 - name: download JetBrainsMono Nerd Font
+  become: true
   get_url: 
     url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
     dest: /tmp/nerd-fonts
