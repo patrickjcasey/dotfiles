@@ -12,9 +12,14 @@
     cmd: '{{ item }}'
     chdir: ~/repos/neovim
   loop:
-   - rm -r .deps/
-   - rm -r build/
+   - rm -r .deps/ || true
+   - rm -r build/ || true
    - make CMAKE_BUILD_TYPE=Release
    - sudo rm -f /usr/local/bin/nvim
-   - sudo rm -r /usr/local/share/nvim
+   - sudo rm -r /usr/local/share/nvim || true
    - sudo make install
+
+- name: install latest nvim plugins
+  shell: '{{ item }}'
+  loop:
+    - nvim --headless "+Lzy! sync" +qa
