@@ -57,6 +57,10 @@ return {
 
             opts.desc = "Restart LSP"
             keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+            if vim.lsp.inlay_hint then
+                vim.lsp.inlay_hint.enable(true, { 0 })
+            end
         end
 
         -- used to enable autocompletion (assign to every lsp server config)
@@ -98,6 +102,13 @@ return {
         lspconfig["rust_analyzer"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
+            settings = {
+                ["rust-analyzer"] = {
+                    check = {
+                        command = "clippy"
+                    }
+                }
+            }
         })
 
         -- configure python server
