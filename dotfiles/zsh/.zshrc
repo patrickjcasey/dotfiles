@@ -18,8 +18,13 @@ DOTFILES=$HOME/.dotfiles
 PATH=$HOME/.cargo/bin:$HOME/.rustup:$PATH
 
 # enable fzf, mainly for a better ctrl-r
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
+if [[ "$(uname)" == "Darwin" ]]; then
+    # Add fzf key bindings and fuzzy completion
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+else
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+    source /usr/share/doc/fzf/examples/completion.zsh
+fi
 
 alias vim=nvim
 alias cat="bat --theme gruvbox-dark"
