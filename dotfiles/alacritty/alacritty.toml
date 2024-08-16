@@ -1,9 +1,9 @@
-shell = { program = "/usr/bin/zsh", args = ["-l"]}
+shell = { program = "/bin/zsh", args = ["-l"]}
 live_config_reload = true
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "SemiBold" }
-size = 14.0
+size = 18.0
 
 [cursor]
 style = { shape = "Beam" }

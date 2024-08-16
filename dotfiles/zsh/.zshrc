@@ -1,5 +1,8 @@
 [[ -f ~/.cargo/env ]] && source $HOME/.cargo/env
 
+# ensure ls has color
+alias ls="ls --color=auto"
+
 # avoid duplicates in history
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
