@@ -1,0 +1,31 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 20,
+    "spacing": 5,
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "memory", "cpu", "disk", "temperature"],
+    "memory": {
+        "interval": 15,
+        "format": "RAM {used:0.1f}G/{total:0.1f}G "
+    },
+    "clock": {
+        "interval": 1,
+    },
+    "cpu": {
+        "interval": 15,
+        "format": "CPU {}% ",
+        "max-length": 20
+    },
+    "disk": {
+      "interval": 30,
+      "format": "ROOT {percentage_free}% FREE",
+      "path": "/" 
+    },
+    "temperature": {
+      "interval": 30,
+      "format": "CPU {temperatureC}°C ",
+      "path": "/"
+    }
+}

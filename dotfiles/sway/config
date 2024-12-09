@@ -1,0 +1,153 @@
+# (alt)
+set $mod Mod1
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font JetBrains Mono 16
+
+## Window decoration
+# class                 border  backgr. text    indicator child_border
+client.focused          #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
+client.focused_inactive #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
+client.unfocused        #414868 #24283b #a9b1d6 #7dcfff   #414868
+client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
+
+# Idle configuration
+exec swayidle -w \
+          timeout 600 'swaylock -f' \
+          timeout 12000 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          before-sleep 'swaylock -f'
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+bindsym $mod+Return exec --no-startup-id alacritty 
+
+bindsym $mod+Shift+q kill
+
+# start rofi (a program launcher)
+bindsym $mod+d exec --no-startup-id rofi -mode drun -show-icons -show drun
+
+# screenshot
+bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy -t image/png
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (tabbed, toggle split)
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# # switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bar {
+    status_command waybar
+    position bottom
+}
+
+# background
+output "*" bg ~/backgrounds/mountain-horizontal-background.jpg fill
+
+# enable gaps between windows
+gaps inner 3
+gaps outer 3
+
+# configure monitors
+set $mon-primary HDMI-A-1
+
+output HDMI-A-1 {
+    resolution 3840x2160
+    pos 0 0
+    scale 1.25
+}
+
+output DP-2 {
+    transform 90
+    resolution 1920x1080
+    pos 3072 -130
+}
+
+# disable borders
+default_border none
+default_border normal 0
+default_floating_border normal 0
