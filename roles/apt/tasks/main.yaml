@@ -19,7 +19,6 @@
       - tree
       - curl
       - golang
-      - nvidia-settings
       - xclip
       - doxygen
       - jq
@@ -32,7 +31,12 @@
       - picom
       - feh
       - fzf
-      - i3
-      - rofi
       - stow
       - cmake
+      - sway
+      - nouveau
+      - rofi
+      - waybar
+      - grim
+      - slurp
+      - wl-clipboard
