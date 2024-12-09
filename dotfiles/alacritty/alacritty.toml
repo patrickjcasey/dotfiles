@@ -1,14 +1,15 @@
+import = [ "~/.config/alacritty/tokyonight-storm.toml" ]
 shell = { program = "/usr/bin/zsh", args = ["-l"]}
 live_config_reload = true
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "SemiBold" }
-size = 14.0
+size = 18.0
 
 [cursor]
 style = { shape = "Beam" }
 unfocused_hollow = false
 
 [window]
-opacity = 0.8
+opacity = 0.9
 decorations = "None"
