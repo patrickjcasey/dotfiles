@@ -96,6 +96,9 @@ return {
         lspconfig["clangd"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
+            filetypes = {
+                "c", "cpp", "objc", "objcpp", "cuda"
+            }
         })
 
         -- configure rust analyzer
