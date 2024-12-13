@@ -40,3 +40,4 @@
       - grim
       - slurp
       - wl-clipboard
+      - protobuf-compiler
