@@ -121,7 +121,7 @@ mode "resize" {
 }
 
 bar {
-    status_command waybar
+    swaybar_command waybar
     position bottom
 }
 
@@ -129,7 +129,7 @@ bar {
 output "*" bg ~/backgrounds/mountain-horizontal-background.jpg fill
 
 # enable gaps between windows
-gaps inner 3
+gaps inner 8
 gaps outer 3
 
 # configure monitors
@@ -151,3 +151,7 @@ output DP-2 {
 default_border none
 default_border normal 0
 default_floating_border normal 0
+
+# fix gtk apps being slow to open
+exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
+exec dbus-update-activation-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
