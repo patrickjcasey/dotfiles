@@ -1,2 +1,3 @@
-commit:
+git:
+  commit:
     signOff: true
