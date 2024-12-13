@@ -7,15 +7,13 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
-
-# write to zsh hist file instantly
+setopt SHARE_HISTORY
+setopt HIST_REDUCE_BLANKS
 setopt INC_APPEND_HISTORY
-
-# persist history
+setopt appendhistory
 HISTFILE="~/.zsh_history"
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory
 
 VIM="nvim"
 XDG_CONFIG_HOME=$HOME/.config
