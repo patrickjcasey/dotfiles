@@ -11,6 +11,12 @@ setopt HIST_SAVE_NO_DUPS
 # write to zsh hist file instantly
 setopt INC_APPEND_HISTORY
 
+# persist history
+HISTFILE="~/.zsh_history"
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
+
 VIM="nvim"
 XDG_CONFIG_HOME=$HOME/.config
 GIT_EDITOR=$VIM
