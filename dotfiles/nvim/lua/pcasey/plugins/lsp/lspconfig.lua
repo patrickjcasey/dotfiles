@@ -58,6 +58,7 @@ return {
             opts.desc = "Restart LSP"
             keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
+            -- enable inlay hints
             if vim.lsp.inlay_hint then
                 vim.lsp.inlay_hint.enable(true, { 0 })
             end
