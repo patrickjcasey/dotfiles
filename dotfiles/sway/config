@@ -21,12 +21,15 @@ exec swayidle -w \
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Return exec --no-startup-id alacritty 
+bindsym $mod+Return exec --no-startup-id ghostty
 
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -mode drun -show-icons -show drun
+
+# lock screen
+bindsym $mod+Escape exec swayidle timeout 10 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' & swaylock -c 000000
 
 # screenshot
 bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy -t image/png
@@ -142,9 +145,8 @@ output HDMI-A-1 {
 }
 
 output DP-2 {
-    transform 90
     resolution 1920x1080
-    pos 3072 -130
+    pos 3072 320
 }
 
 # disable borders
