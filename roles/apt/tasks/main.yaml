@@ -27,7 +27,6 @@
       - wget
       - curl
       - libssl-dev
-      - kitty
       - picom
       - feh
       - fzf
