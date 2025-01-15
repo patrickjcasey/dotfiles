@@ -1,0 +1,6 @@
+font-size = 20
+font-family = "JetBrainsMono NF SemiBold"
+theme = "tokyonight_night"
+window-decoration = false
+shell-integration = "zsh"
+gtk-titlebar = false
