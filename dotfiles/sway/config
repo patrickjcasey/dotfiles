@@ -32,7 +32,7 @@ bindsym $mod+d exec --no-startup-id rofi -mode drun -show-icons -show drun
 bindsym $mod+Escape exec swayidle timeout 10 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' & swaylock -c 000000
 
 # screenshot
-bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy -t image/png
+bindsym $mod+s exec grim -g "$(slurp -d)" - | wl-copy -t image/png
 
 # change focus
 bindsym $mod+h focus left
