@@ -11,10 +11,10 @@
   become: true
   tags:
     - apt
-  apt: 
+  apt:
     state: present
     name:
-      - git 
+      - git
       - python3-pip
       - tree
       - curl
@@ -32,11 +32,9 @@
       - fzf
       - stow
       - cmake
-      - sway
-      - nouveau
+      - i3
+      - i3lock
+      - polybar
       - rofi
-      - waybar
-      - grim
-      - slurp
-      - wl-clipboard
       - protobuf-compiler
+      - picom
