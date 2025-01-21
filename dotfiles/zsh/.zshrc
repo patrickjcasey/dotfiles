@@ -10,10 +10,12 @@ setopt HIST_SAVE_NO_DUPS
 setopt SHARE_HISTORY
 setopt HIST_REDUCE_BLANKS
 setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_VERIFY
 setopt appendhistory
-HISTFILE="~/.zsh_history"
-HISTSIZE=1000
-SAVEHIST=1000
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
 
 VIM="nvim"
 XDG_CONFIG_HOME=$HOME/.config
@@ -30,6 +32,7 @@ alias cat="bat --theme gruvbox-dark"
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
+
 # bun completions
 [ -s "/home/trick/.bun/_bun" ] && source "/home/trick/.bun/_bun"
 
