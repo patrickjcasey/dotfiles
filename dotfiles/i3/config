@@ -134,8 +134,14 @@ exec --no-startup-id xrandr \
 # set background
 exec_always --no-startup-id feh --bg-scale --zoom max ~/backgrounds/mountain-horizontal-background.jpg
 
+# keybind for screenshot
+bindsym $mod+Shift+s exec "flameshot gui"
+
+# keybind for taking screen recording
+bindsym $mod+Shift+a exec peek
+
 # sets lock screen keybind
 bindsym $mod+Escape exec i3lock -c 000000 && xset dpms force off
 
 # start polybar
-exec_always --no-startup-id bash -c "polybar --reload bar1 &"
+exec_always --no-startup-id bash -c "killall -9 polybar; sleep 1; polybar --reload bar1 &"
