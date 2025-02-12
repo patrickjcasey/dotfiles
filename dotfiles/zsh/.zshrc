@@ -38,3 +38,6 @@ eval "$(zoxide init zsh --cmd cd)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# move starship config to ~/.config/starship/config.toml
+export STARSHIP_CONFIG=~/.config/starship/config.toml
