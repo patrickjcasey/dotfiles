@@ -46,12 +46,6 @@ return {
             opts.desc = "Show line diagnostics"
             keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
-            opts.desc = "Go to previous diagnostic"
-            keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
-
-            opts.desc = "Go to next diagnostic"
-            keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
-
             opts.desc = "Show documentation for what is under cursor"
             keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
@@ -113,6 +107,28 @@ return {
                     }
                 }
             }
+        })
+        -- configure eslint LSP
+        lspconfig["eslint"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        -- configure eslint LSP
+        lspconfig["prettier"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        -- configure typescript LSP
+        lspconfig["ts_ls"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        lspconfig["tailwindcss"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
         })
 
         -- configure python server
