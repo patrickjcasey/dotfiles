@@ -12,4 +12,4 @@ mkdir -p $OFFLINE_ARCHIVE/.config
 echo "Copying neovim configuration and data"
 cp -r ~/.dotfiles/dotfiles/nvim/ $OFFLINE_ARCHIVE/.config
 cp -r ~/.local/share/nvim $OFFLINE_ARCHIVE/.local/share
-rm -rf $OFFLINE_ARCHIVE
+tar cfvz /tmp/dotfiles.tar.gz $OFFLINE_ARCHIVE
