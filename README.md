@@ -14,11 +14,13 @@ ansible-playbook --ask-become-pass main.yaml
 ```
 
 ## Installs
-- latest stable and nightly rust toolchains 
+
+- latest stable and nightly rust toolchains
 - installs JetBrains Mono Nerd Font
 - various development-related apt packages (curl, wget, xclip, tree, jq, tmux...)
 
 ## Build and install latest stable versions of the following programs:
+
 - [alacritty](https://github.com/alacritty/alacritty)
 - [neovim](https://github.com/neovim/neovim)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
@@ -28,6 +30,7 @@ ansible-playbook --ask-become-pass main.yaml
 - [zellij](https://github.com/zellij-org/zellij)
 
 ## Contains configuration for following programs:
+
 - kitty
 - i3
 - neovim
@@ -36,6 +39,11 @@ ansible-playbook --ask-become-pass main.yaml
 - zellij
 - tmux
 - alacritty
+- ghostty
+- lazygit
+- waybar
+- starship
 
 ## Oddities
+
 when running `nvidia-settings`, use `nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings`. This is because of this [issue](https://github.com/NVIDIA/nvidia-settings/issues/30)
