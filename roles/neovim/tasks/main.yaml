@@ -16,21 +16,19 @@
 - name: clone neovim repo
   git:
     repo: https://github.com/neovim/neovim.git
-    dest: ~/repos/neovim
-    version: stable
+    dest: /opt/repos/neovim
+    version: master
     update: yes
     force: yes
 
-- name: build and install latest stable neovim
+- name: build and install latest neovim
   shell: 
     cmd: '{{ item }}'
-    chdir: ~/repos/neovim
+    chdir: /opt/repos/neovim
   loop:
    - rm -r .deps/ || true
    - rm -r build/ || true
    - make CMAKE_BUILD_TYPE=Release
-   - sudo rm -f /usr/local/bin/nvim
-   - sudo rm -r /usr/local/share/nvim || true
    - sudo make install
 
 - name: install latest nvim plugins
