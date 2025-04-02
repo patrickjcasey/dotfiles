@@ -19,22 +19,16 @@
       - tree
       - curl
       - golang
-      - xclip
-      - doxygen
       - jq
       - zsh
       - tmux
       - wget
       - curl
-      - libssl-dev
-      - picom
-      - feh
       - fzf
       - stow
       - cmake
-      - i3
-      - i3lock
-      - polybar
-      - rofi
       - protobuf-compiler
-      - picom
+      - nouveau-firmware
+      - ca-certificates
+      - neofetch
+      - ripgrep
