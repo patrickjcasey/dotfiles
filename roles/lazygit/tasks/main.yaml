@@ -2,7 +2,7 @@
 - name: clone lazygit repo
   git:
     repo: https://github.com/jesseduffield/lazygit.git
-    dest: ~/repos/lazygit
+    dest: /opt/repos/lazygit
     version: latest
     update: yes
     force: yes
@@ -11,6 +11,6 @@
   become: true
   shell:
     cmd: '{{ item }}'
-    chdir: ~/repos/lazygit
+    chdir: /opt/repos/lazygit
   loop:
    - GOBIN=/usr/local/bin/ go install
