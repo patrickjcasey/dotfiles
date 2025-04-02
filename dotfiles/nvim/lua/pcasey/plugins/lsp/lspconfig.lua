@@ -114,12 +114,6 @@ return {
             on_attach = on_attach,
         })
 
-        -- configure eslint LSP
-        lspconfig["prettier"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-        })
-
         -- configure typescript LSP
         lspconfig["ts_ls"].setup({
             capabilities = capabilities,
