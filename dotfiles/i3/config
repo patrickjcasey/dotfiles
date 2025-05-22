@@ -1,9 +1,7 @@
 set $mod Mod1
 
 font JetBrains Mono 20
-for_window [class="^.*"] border pixel 1
-                          # class                 border  backgr. text    indicator child_border
-for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+gaps inner 2px
 
 floating_modifier $mod
 # start a terminal
@@ -124,10 +122,10 @@ exec --no-startup-id picom
 exec --no-startup-id xrandr \
     --output DP-0 --off \
     --output DP-1 --off \
-    --output HDMI-0 --mode 3840x2160 --pos 0x0 --rotate normal --rate 60 \
+    --output HDMI-0 --mode 3840x2160 --pos 0x0 --rotate normal --rate 60 --panning 1920X1080 --scale 0.5x0.5 \
     --output DP-2 --off \
     --output DP-3 --off \
-    --output DP-4 --mode 1920x1080 --pos 3840x700 --rotate normal --rate 240 \
+    --output DP-4 --mode 1920x1080 --pos 3840x700 --rotate normal --rate 240 --scale 1x1 \
     --output DP-5 --off \
     --output USB-C-0 --off
 
