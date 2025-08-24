@@ -132,8 +132,8 @@ bar {
 output "*" bg ~/backgrounds/mountain-horizontal-background.jpg fill
 
 # enable gaps between windows
-gaps inner 8
-gaps outer 3
+gaps inner 4
+gaps outer 2
 
 # configure monitors
 set $mon-primary HDMI-A-1
@@ -141,18 +141,16 @@ set $mon-primary HDMI-A-1
 output HDMI-A-1 {
     resolution 3840x2160
     pos 0 0
-    scale 1.25
+    scale 2
 }
 
 output DP-2 {
     resolution 1920x1080
-    pos 3072 320
+    pos  1920 0
 }
 
 # disable borders
 default_border none
-default_border normal 0
-default_floating_border normal 0
 
 # fix gtk apps being slow to open
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
