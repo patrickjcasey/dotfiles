@@ -42,3 +42,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # move starship config to ~/.config/starship/config.toml
 export STARSHIP_CONFIG=~/.config/starship/config.toml
+
+
+# opencode
+export PATH=/home/trick/.opencode/bin:$PATH
