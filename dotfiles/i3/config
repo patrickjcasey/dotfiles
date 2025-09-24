@@ -1,7 +1,11 @@
 set $mod Mod1
 
-font JetBrains Mono 20
+font JetBrains Mono 16
 gaps inner 2px
+
+# disable borders
+default_border none
+default_floating_border none
 
 floating_modifier $mod
 # start a terminal
@@ -122,10 +126,10 @@ exec --no-startup-id picom
 exec --no-startup-id xrandr \
     --output DP-0 --off \
     --output DP-1 --off \
-    --output HDMI-0 --mode 3840x2160 --pos 0x0 --rotate normal --rate 60 --panning 1920X1080 --scale 0.5x0.5 \
+    --output HDMI-0 --mode 3840x2160 --pos 0x0 --rotate normal --rate 60 --panning 1920X1080 --scale 1x1 \
     --output DP-2 --off \
     --output DP-3 --off \
-    --output DP-4 --mode 1920x1080 --pos 3840x700 --rotate normal --rate 240 --scale 1x1 \
+    --output DP-4 --mode 1920x1080 --pos 3840x700 --rotate normal --rate 240 --scale 0.8x0.8 \
     --output DP-5 --off \
     --output USB-C-0 --off
 
