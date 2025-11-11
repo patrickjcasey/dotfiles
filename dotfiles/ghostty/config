@@ -1,3 +1,4 @@
-font-size = 12
+font-size = 14
 font-family = "JetBrainsMonoNL NF SemiBold"
-theme = "tokyonight_night"
+theme = "TokyoNight Storm"
+command = zsh
