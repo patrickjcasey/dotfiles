@@ -1,4 +1,0 @@
-# this script puts config and data files in the correct spot for an offline install
-tar zxvf dotfiles.tar.gz
-cp -r dotfiles/.local ~
-cp -r dotfiles/.config ~
