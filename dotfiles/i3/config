@@ -1,7 +1,8 @@
 set $mod Mod1
 
 font JetBrains Mono 16
-gaps inner 2px
+gaps inner 10
+gaps outer -10
 
 # disable borders
 default_border none
