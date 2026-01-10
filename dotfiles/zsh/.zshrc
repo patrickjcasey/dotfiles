@@ -23,9 +23,16 @@ GIT_EDITOR=$VIM
 DOTFILES=$HOME/.dotfiles
 PATH=$HOME/.cargo/bin:$HOME/.rustup:$PATH
 
-# enable fzf
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
+# enable fzf (cross-platform)
+if [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
+    # Debian/Ubuntu Linux
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+    source /usr/share/doc/fzf/examples/completion.zsh
+elif [[ -f /opt/homebrew/opt/fzf/shell/key-bindings.zsh ]]; then
+    # Homebrew on Apple Silicon
+    source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+    source /opt/homebrew/opt/fzf/shell/completion.zsh
+fi
 
 alias vim=nvim
 alias cat="bat --theme gruvbox-dark"
@@ -43,6 +50,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # move starship config to ~/.config/starship/config.toml
 export STARSHIP_CONFIG=~/.config/starship/config.toml
 
-
 # opencode
-export PATH=/home/trick/.opencode/bin:$PATH
+export PATH=$HOME/.opencode/bin:$PATH
+
+# claude
+export PATH=$HOME/.local/bin:$PATH
