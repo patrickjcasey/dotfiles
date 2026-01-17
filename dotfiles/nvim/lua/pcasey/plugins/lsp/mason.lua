@@ -37,7 +37,8 @@ return {
                 "tailwindcss",
                 "eslint",
                 "clangd",
-                "rust_analyzer",
+                -- handled by rustup w/ `rustup component add rust-analyzer`
+                -- "rust_analyzer",
                 "nil_ls",
             },
             -- auto-install configured servers (with lspconfig)
