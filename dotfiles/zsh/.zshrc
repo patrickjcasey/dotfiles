@@ -2,7 +2,6 @@
 
 # avoid duplicates in history
 setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
@@ -12,7 +11,6 @@ setopt HIST_REDUCE_BLANKS
 setopt INC_APPEND_HISTORY
 setopt EXTENDED_HISTORY
 setopt HIST_VERIFY
-setopt appendhistory
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
