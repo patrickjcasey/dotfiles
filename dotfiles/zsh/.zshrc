@@ -37,14 +37,9 @@ fi
 alias vim=nvim
 alias cat="bat --theme gruvbox-dark"
 
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh --cmd cd)"
-
 # move starship config to ~/.config/starship/config.toml
 export STARSHIP_CONFIG=~/.config/starship/config.toml
 
-# opencode
-export PATH=$HOME/.opencode/bin:$PATH
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 
-# claude
-export PATH=$HOME/.local/bin:$PATH
