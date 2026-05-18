@@ -17,11 +17,10 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 
-VIM="nvim"
-XDG_CONFIG_HOME=$HOME/.config
-GIT_EDITOR=$VIM
-DOTFILES=$HOME/.dotfiles
-PATH=$HOME/.cargo/bin:$HOME/.rustup:$PATH
+export EDITOR="nvim"
+export XDG_CONFIG_HOME=$HOME/.config
+export GIT_EDITOR=$EDITOR
+export DOTFILES=$HOME/.dotfiles
 
 # enable fzf (cross-platform)
 if [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
