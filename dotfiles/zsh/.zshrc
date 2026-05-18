@@ -1,5 +1,3 @@
-[[ -f ~/.cargo/env ]] && source $HOME/.cargo/env
-
 # avoid duplicates in history
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_ALL_DUPS
@@ -20,6 +18,16 @@ export XDG_CONFIG_HOME=$HOME/.config
 export GIT_EDITOR=$EDITOR
 export DOTFILES=$HOME/.dotfiles
 
+if [[ -d /opt/homebrew/bin ]]; then
+    PATH=/opt/homebrew/bin:$PATH
+fi
+
+# initialize completion system before fzf sources its completion script
+autoload -Uz compinit && compinit
+
+# load cargo environments
+[[ -f ~/.cargo/env ]] && source $HOME/.cargo/env
+
 # enable fzf (cross-platform)
 if [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
     # Debian/Ubuntu Linux
@@ -34,7 +42,7 @@ fi
 alias vim=nvim
 alias cat="bat --theme gruvbox-dark"
 
-# move starship config to ~/.config/starship/config.toml
+# starship config lives at ~/.config/starship/config.toml
 export STARSHIP_CONFIG=~/.config/starship/config.toml
 
 eval "$(starship init zsh)"
