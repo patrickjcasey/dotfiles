@@ -40,13 +40,6 @@ alias cat="bat --theme gruvbox-dark"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 
-# bun completions
-[ -s "/home/trick/.bun/_bun" ] && source "/home/trick/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 # move starship config to ~/.config/starship/config.toml
 export STARSHIP_CONFIG=~/.config/starship/config.toml
 
