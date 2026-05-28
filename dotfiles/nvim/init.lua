@@ -141,7 +141,7 @@ require("mason-lspconfig").setup({
     ensure_installed = {
         "html",
         "lua_ls",
-        "pyright",
+        "ty",
         "yamlls",
         "jsonls",
         "bashls",
@@ -242,7 +242,7 @@ vim.lsp.enable("rust_analyzer")
 vim.lsp.enable("eslint")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("tailwindcss")
-vim.lsp.enable("pyright")
+vim.lsp.enable("ty")
 vim.lsp.enable("yamlls")
 vim.lsp.enable("marksman")
 vim.lsp.enable("taplo")
