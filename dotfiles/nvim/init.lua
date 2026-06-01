@@ -267,7 +267,7 @@ vim.lsp.enable("lua_ls")
 --------------------------------------------------------------------------------
 require("conform").setup({
     formatters_by_ft = {
-        python = { "black" },
+        python = { "ruff_organize_imports", "ruff_fix", "ruff_format" },
         rust = { "rustfmt" },
         c = { "clang-format" },
         html = { "prettierd" },
